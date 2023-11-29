@@ -13,6 +13,4 @@ knitr::opts_chunk$set(
 )
 ```
 
-# `ondiscFork`: large-scale computing on single-cell data <img src="man/figures/hex_alt.png" align="right" alt="" width="180" />
-
 See https://github.com/timothy-barry/ondisc for the real one.
