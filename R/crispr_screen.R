@@ -43,14 +43,14 @@ convert_assign_list_to_sparse_odm <- function(cell_barcodes, grna_ids, grna_assi
                                                       j = cell_coordinates,
                                                       dims = c(n_grnas, n_cells)))
   # write the ODM
-  ret <- ondisc::create_ondisc_matrix_from_R_matrix(r_matrix = grna_assignment_m,
+  ret <- ondiscFork::create_ondisc_matrix_from_R_matrix(r_matrix = grna_assignment_m,
                                                     barcodes = cell_barcodes,
                                                     features_df = data.frame(grna_ids),
                                                     odm_fp = odm_fp,
                                                     metadata_fp = metadata_fp)
   if (!is.null(features_metadata_df)) {
-    ret <- ret |> ondisc::mutate_feature_covariates(features_metadata_df)
-    ondisc::save_odm(odm = ret, metadata_fp = metadata_fp)
+    ret <- ret |> ondiscFork::mutate_feature_covariates(features_metadata_df)
+    ondiscFork::save_odm(odm = ret, metadata_fp = metadata_fp)
   }
   return(ret)
 }
