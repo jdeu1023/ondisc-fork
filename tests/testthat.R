@@ -1,4 +1,4 @@
 library(testthat)
-library(ondisc)
+library(ondiscFork)
 
-test_check("ondisc")
+test_check("ondiscFork")
